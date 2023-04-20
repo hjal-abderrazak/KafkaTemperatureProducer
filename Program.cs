@@ -47,7 +47,7 @@ namespace KafkaTemperatureProducer
                     // Send the message to the Kafka topic.
                     var result = await producer.ProduceAsync(topic, message);
 
-                    Console.WriteLine($"Sent temperature reading {temperature} ");
+                    Console.WriteLine($"Sent temperature reading:{temperature} --- Co2 reading:{niveauCo2} ");
 
                     // Wait for 5 seconds before sending the next temperature reading.
                     await Task.Delay(5000);
